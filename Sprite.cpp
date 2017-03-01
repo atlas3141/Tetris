@@ -75,6 +75,9 @@ void SpriteGroup::draw(SDL_Surface* destination){
   }
 }
 void SpriteGroup::empty(){
+  for(int i = 0; i < sprites_size; i++){
+    delete sprites[i];
+  }
   sprites.clear();
   sprites_size = sprites.size();
 }
